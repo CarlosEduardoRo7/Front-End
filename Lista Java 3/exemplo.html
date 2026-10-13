@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuada (com FOR e Formulário)</title>
+</head>
+<body>
+  <h1>Gerador de Tabuada</h1>
+  <form id="formTabuada">
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero" required>
+    <button type="submit">Gerar Tabuada</button>
+  </form>
+    <div id="resultado"></div>
+    <script>
+
+        const form = document.getElementById("formTabuada");
+        const resultado = document.getElementById("resultado");
+    
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();             // evita o recarregamento da página
+    
+          const num = Number(document.getElementById("numero").value);
+          resultado.innerHTML = `<h3>Tabuada do ${num}</h3>`;
+    
+          for (let i = 1; i <= 10; i++) {
+            resultado.innerHTML += `${num} x ${i} = ${num * i}<br>`;
+          }
+        });
+    
+      </script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f2f2f2;       }
+    h1 {
+      color: #333;       }
+    form {
+      margin-bottom: 20px;       }
+    input, button {
+      padding: 8px;
+      font-size: 16px;       }
+    #resultado {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      width: fit-content;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);       }
+  </style>
+    

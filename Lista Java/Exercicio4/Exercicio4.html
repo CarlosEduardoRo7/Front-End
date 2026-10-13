@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script4.js"></script>
+</head>
+<body>
+<h2>Calculadora de Compra</h2>
+
+  <form onsubmit="return calcularCompra();">
+    <label for="nome">Nome do cliente:</label>
+    <input type="text" id="nome" placeholder="Digite o nome"><br><br>
+
+    <label for="produto">Produto:</label>
+    <input type="text" id="produto" placeholder="Ex: Camisa"><br><br>
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="text" id="quantidade" placeholder="Ex: 3"><br><br>
+
+    <label for="preco">Preço unitário (R$):</label>
+    <input type="text" id="preco" placeholder="Ex: 49.90"><br><br>
+
+    <input type="submit" value="Calcular Compra">
+  </form>
+  Resultado: <p id="resultado"></p>
+</body>
+</html>
+
